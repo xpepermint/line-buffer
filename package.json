@@ -1,0 +1,41 @@
+{
+  "name": "linebuffer",
+  "version": "0.1.0",
+  "description": "For reading stream's data as lines.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "ava": {
+    "files": [
+      "./tests/*.js",
+      "./tests/**/*.js"
+    ],
+    "concurrency": 5,
+    "failFast": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpepermint/linebufferjs.git"
+  },
+  "keywords": [
+    "buffer",
+    "buffers",
+    "stream",
+    "streams",
+    "readable",
+    "writable",
+    "line",
+    "read",
+    "reader"
+  ],
+  "bugs": {
+    "url": "https://github.com/xpepermint/linebufferjs/issues"
+  },
+  "homepage": "https://github.com/xpepermint/linebufferjs#readme",
+  "author": "Kristijan Sedlak (Xpepermint)",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "0.16.0"
+  }
+}
