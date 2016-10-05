@@ -44,7 +44,7 @@ buffer.feed('\n'); //-> ['456']
 
 **Event: linebuffer.on('line', (line) => {})**
 
-> Emitted when the the line is available.
+> Emitted when the line is available.
 
 | Argument | Type | Description
 |--------|------|----------
@@ -52,7 +52,7 @@ buffer.feed('\n'); //-> ['456']
 
 **Event: linebuffer.on('drain', () => {})**
 
-> Emitted when the the buffer is cleared.
+> Emitted when the buffer is cleared.
 
 ## License (MIT)
 
