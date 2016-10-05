@@ -15,9 +15,9 @@ $ npm install --save line-buffer
 ## Example
 
 ```js
-import {line-buffer} from 'line-buffer';
+import {LineBuffer} from 'line-buffer';
 
-let buffer = new line-buffer();
+let buffer = new LineBuffer();
 buffer.feed('abc\ndef\r\nghi'); //-> ['abc', 'def', 'ghi']
 buffer.feed('123\r'); //-> []
 buffer.feed('\n456'); //-> ['123']
@@ -26,11 +26,11 @@ buffer.feed('\n'); //-> ['456']
 
 ## API
 
-**line-buffer()**
+**LineBuffer()**
 
 > A core buffer class.
 
-**line-buffer.feed(data)**:Array
+**linebuffer.feed(data)**:Array
 
 > A method for feeding the buffer with data.
 
@@ -38,11 +38,11 @@ buffer.feed('\n'); //-> ['456']
 |--------|------|----------|---------|------------
 | data | String|Buffer | No | - | A chunk of data to fill the buffer.
 
-**line-buffer.drain()**
+**linebuffer.drain()**
 
 > A method for clearing the buffer.
 
-**Event: line-buffer.on('line', (line) => {})**
+**Event: linebuffer.on('line', (line) => {})**
 
 > Emitted when the the line is available.
 
@@ -50,7 +50,7 @@ buffer.feed('\n'); //-> ['456']
 |--------|------|----------
 | line | Buffer | A line of data.
 
-**Event: line-buffer.on('drain', () => {})**
+**Event: linebuffer.on('drain', () => {})**
 
 > Emitted when the the buffer is cleared.
 
