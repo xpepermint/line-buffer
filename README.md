@@ -1,23 +1,23 @@
-![Build Status](https://travis-ci.org/xpepermint/linebufferjs.svg?branch=master)&nbsp;[![NPM Version](https://badge.fury.io/js/linebuffer.svg)](https://badge.fury.io/js/linebuffer)&nbsp;[![Dependency Status](https://gemnasium.com/xpepermint/linebufferjs.svg)](https://gemnasium.com/xpepermint/linebufferjs)
+![Build Status](https://travis-ci.org/xpepermint/line-buffer.svg?branch=master)&nbsp;[![NPM Version](https://badge.fury.io/js/line-buffer.svg)](https://badge.fury.io/js/line-buffer)&nbsp;[![Dependency Status](https://gemnasium.com/xpepermint/line-buffer.svg)](https://gemnasium.com/xpepermint/line-buffer)
 
-# linebuffer.js
+# line-buffer
 
 > For reading stream's data as lines.
 
-This is an open source package. The source code is available on [GitHub](https://github.com/xpepermint/linebufferjs) where you can also find our [issue tracker](https://github.com/xpepermint/linebufferjs/issues).
+This is an open source [npm](http://npmjs.com) package from [Node.js](http://nodejs.org). The source code is available on [GitHub](https://github.com/xpepermint/line-buffer) where you can also find our [issue tracker](https://github.com/xpepermint/line-buffer/issues).
 
 ## Install
 
 ```
-$ npm install --save linebuffer
+$ npm install --save line-buffer
 ```
 
 ## Example
 
 ```js
-import {LineBuffer} from 'linebuffer';
+import {line-buffer} from 'line-buffer';
 
-let buffer = new LineBuffer();
+let buffer = new line-buffer();
 buffer.feed('abc\ndef\r\nghi'); //-> ['abc', 'def', 'ghi']
 buffer.feed('123\r'); //-> []
 buffer.feed('\n456'); //-> ['123']
@@ -26,31 +26,31 @@ buffer.feed('\n'); //-> ['456']
 
 ## API
 
-**LineBuffer()**
+**line-buffer()**
 
 > A core buffer class.
 
-**linebuffer.feed(data)**:Array
+**line-buffer.feed(data)**:Array
 
 > A method for feeding the buffer with data.
 
 | Option | Type | Required | Default | Description
 |--------|------|----------|---------|------------
-| data | String | No | - | A chunk of data to fill the buffer.
+| data | String|Buffer | No | - | A chunk of data to fill the buffer.
 
-**linebuffer.drain()**
+**line-buffer.drain()**
 
 > A method for clearing the buffer.
 
-**Event: linebuffer.on('line', (line) => {})**
+**Event: line-buffer.on('line', (line) => {})**
 
 > Emitted when the the line is available.
 
 | Argument | Type | Description
 |--------|------|----------
-| line | String | A line of data.
+| line | Buffer | A line of data.
 
-**Event: linebuffer.on('drain', () => {})**
+**Event: line-buffer.on('drain', () => {})**
 
 > Emitted when the the buffer is cleared.
 
