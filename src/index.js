@@ -1,10 +1,10 @@
-const events = require('events');
+const {EventEmitter} = require('events');
 
 /*
 * The core class for reading data as lines.
 */
 
-exports.LineBuffer = class extends events.EventEmitter {
+exports.LineBuffer = class extends EventEmitter {
 
   /*
   * Class constructor.
