@@ -44,7 +44,7 @@ buffer.feed('\n'); //-> ['456']
 
 **Event: linebuffer.on('line', (line) => {})**
 
-> Emitted when the line is available.
+> Emitted when a new line of data is available.
 
 | Argument | Type | Description
 |--------|------|----------
